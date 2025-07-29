@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    if(n%2 ==0){
+        goto Case1;}
+        else {
+            goto Case2;}
+            Case1:
+            cout<<"Even"<<endl;
+            Case2:
+            cout<<"Odd"<<endl;
+            Case3:
+            cout<<"Thankyou"<<endl;
+        }
