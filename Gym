@@ -1,0 +1,27 @@
+/* Wap in which the computer will generate 5  exercises, each with different reps and it will only move ahead once the reps are completed.*/
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+void generateExercises() {
+    const string exercises[] = {"Push-ups", "Sit-ups", "Squats", "Burpees", "Lunges"};
+    const int numExercises = sizeof(exercises) / sizeof(exercises[0]);
+    const int minReps = 5;
+    const int maxReps = 20;
+    // Seed the random number generator
+    srand(static_cast<unsigned int>(time(0)));
+    for (int i = 0; i < 5; ++i) {
+        int reps = rand() % (maxReps - minReps + 1) + minReps; // Random reps between 5 and 20
+        cout << "Exercise " << (i + 1) << ": " << exercises[i] << " - " << reps << " reps\n";
+        // Wait for user to complete the reps
+        cout << "Press Enter when you have completed the reps...";
+        cin.ignore(); // Ignore the previous newline character
+        cin.get(); // Wait for user to press Enter
+    }
+    cout << "Great job! You've completed all the exercises!\n";
+}
+int main() {
+    generateExercises();
+    return 0;
+}
