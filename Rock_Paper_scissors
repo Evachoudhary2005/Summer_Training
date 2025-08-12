@@ -1,0 +1,19 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+    string options[3] = {"Rock", "Paper", "Scissors"};
+    int user, comp;
+    cout << "0: Rock, 1: Paper, 2: Scissors\n";
+    cout << "Enter your choice (0-2): ";
+    cin >> user;
+    comp = rand() % 3;
+    cout << "Computer chose: " << options[comp] << endl;
+    if (user == comp)
+        cout << "It's a draw!";
+    else if ((user == 0 && comp == 2) || (user == 1 && comp == 0) || (user == 2 && comp == 1))
+        cout << "You win!";
+    else
+        cout << "You lose!";
+    return 0;
+}
