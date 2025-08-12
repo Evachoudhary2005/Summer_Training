@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "NewLine" << endl;
+    cout << setw(50) << "Hello\tWorld" << endl; 
+    cout << setprecision(3) << 3.1428571428571 << endl; 
+    cout << fixed << 3.1428571428571 << endl;
+    cout << scientific << 3.1428571428571 << endl;
+}
