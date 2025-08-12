@@ -1,0 +1,9 @@
+#include<iostream>
+using namespace std;
+int main(){
+    const int buffer= 1024;
+    char *buffer1= new char[buffer];
+    cin. getline(buffer1,buffer);
+    cout<<buffer1<<"\n"; 
+    delete[] buffer1;
+}
