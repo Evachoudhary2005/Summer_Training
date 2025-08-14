@@ -1,0 +1,10 @@
+include<iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    string a;
+    string name;
+    cin>>a;
+    getline(cin,name);
+    cout<<a<<endl<<name;
+}
