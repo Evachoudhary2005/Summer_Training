@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int main(){
+    string r= "Prerajulisation";
+    string f= "Farhanitrate";
+    for(int i=3; i<=6;i++)
+    {cout<<r[i];}
+    cout<<endl;
+    return 0;
+}
