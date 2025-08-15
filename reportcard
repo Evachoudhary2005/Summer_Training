@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+struct student{
+    string name;
+    string subject;
+    float marks;
+};
+int main(){
+    student s1;
+    s1.name= "Harshdeep";
+    s1.subject= "OS";
+    s1.marks= 90.0;
+
+    student s2;
+    s2.name= "Jasleen";
+    s2.subject= "OS";
+    s2.marks= 85.0;
+
+    student s3;
+    s3.name= "Arpita";
+    s3.subject= "OS";
+    s3.marks= 87.0;
+
+    cout<<"Name: "<<s1.name<<endl;
+    cout<<"Subject: "<<s1.subject<<endl;
+    cout<<"Marks: "<<s1.marks<<endl;
+
+    cout<<"Name: "<<s2.name<<endl;
+    cout<<"Subject: "<<s2.subject<<endl;
+    cout<<"Marks: "<<s2.marks<<endl;
+
+    cout<<"Name: "<<s3.name<<endl;
+    cout<<"Subject: "<<s3.subject<<endl;
+    cout<<"Marks: "<<s3.marks<<endl;
+}
+
