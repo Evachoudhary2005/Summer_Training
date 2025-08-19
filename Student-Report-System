@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Student {
+    int rollNo;
+    string name;
+    string className;
+};
+
+struct Marks {
+    int english;
+    int maths;
+    int science;
+};
+
+int main() {
+    Student s1;
+    Marks m1;
+
+    cout << "Enter student details:\n";
+    cout << "Roll Number: ";
+    cin >> s1.rollNo;
+    cin.ignore();
+
+    cout << "Name: ";
+    getline(cin, s1.name);
+
+    cout << "Class: ";
+    getline(cin, s1.className);
+
+    cout << "\nEnter marks (out of 100):\n";
+    cout << "English: ";
+    cin >> m1.english;
+    cout << "Maths: ";
+    cin >> m1.maths;
+    cout << "Science: ";
+    cin >> m1.science;
+    cout << "Name    : " << s1.name << endl;
+    cout << "Roll No : " << s1.rollNo << endl;
+    cout << "Class   : " << s1.className << endl;
+    cout << "English : " << m1.english << endl;
+    cout << "Maths   : " << m1.maths << endl;
+    cout << "Science : " << m1.science << endl;
+    return 0;
+}
+
