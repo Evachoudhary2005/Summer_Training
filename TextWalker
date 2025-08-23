@@ -1,0 +1,75 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void walkForward(int steps) {
+    for (int i = 0; i < steps; ++i) {
+        cout << "Right foot up\n";
+        cout << "Take a step forward\n";
+        cout << "Right foot down\n";
+        cout << "Left foot up\n";
+        cout << "Take a step forward\n";
+        cout << "Left foot down\n";
+    }
+}
+
+void walkBackward(int steps) {
+    for (int i = 0; i < steps; ++i) {
+        cout << "Right foot up\n";
+        cout << "Take a step backward\n";
+        cout << "Right foot down\n";
+        cout << "Left foot up\n";
+        cout << "Take a step backward\n";
+        cout << "Left foot down\n";
+    }
+}
+
+void turnRight() {
+    cout << "\nRight foot stays in place\n";
+    cout << "Left foot up\n";
+    cout << "Left foot to the right\n";
+    cout << "Left foot down\n";
+    cout << "Turn body to the right\n\n";
+}
+
+void turnLeft() {
+    cout << "\nLeft foot stays in place\n";
+    cout << "Right foot up\n";
+    cout << "Right foot to the left\n";
+    cout << "Right foot down\n";
+    cout << "Turn body to the left\n\n";
+}
+
+int main() {
+    string command;
+    int steps;
+
+    cout << "Start Walking \n";
+    cout << "Available commands: forward, backward, left, right, stop\n";
+
+    while (true) {
+        cout << "\nEnter command: ";
+        cin >> command;
+
+        if (command == "forward") {
+            cout << "How many steps? ";
+            cin >> steps;
+            walkForward(steps);
+        } else if (command == "backward") {
+            cout << "How many steps? ";
+            cin >> steps;
+            walkBackward(steps);
+        } else if (command == "left") {
+            turnLeft();
+        } else if (command == "right") {
+            turnRight();
+        } else if (command == "stop") {
+            cout << "\nStopping walking\n";
+            break;
+        } else {
+            cout << "Invalid command. Try again.";
+        }
+    }
+    return 0;
+}
