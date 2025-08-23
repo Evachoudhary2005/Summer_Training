@@ -1,0 +1,43 @@
+// WAP to create report card of 3 friends 
+#include <iostream>
+using namespace std;
+
+union Marks {
+    int english, maths, science;
+};
+
+struct Student {
+    int roll;
+    char name[20];
+    Marks eng, math, sci;
+};
+
+int main() {
+    Student s[3];
+
+    for (int i = 0; i < 3; i++) {
+        cout << "\nEnter details for student " << i + 1 << ":\n";
+        cout << "Roll No: ";
+        cin >> s[i].roll;
+        cout << "Name: ";
+        cin >> s[i].name;
+        cout << "English: ";
+        cin >> s[i].eng.english;
+        cout << "Maths: ";
+        cin >> s[i].math.maths;
+        cout << "Science: ";
+        cin >> s[i].sci.science;
+    }
+
+    cout << "\n--- Report Cards ---\n";
+    for (int i = 0; i < 3; i++) {
+        cout << "\nStudent " << i + 1 << ":\n";
+        cout << "Roll No: " << s[i].roll << "\n";
+        cout << "Name   : " << s[i].name << "\n";
+        cout << "English: " << s[i].eng.english << "\n";
+        cout << "Maths  : " << s[i].math.maths << "\n";
+        cout << "Science: " << s[i].sci.science << "\n";
+    }
+
+    return 0;
+}
