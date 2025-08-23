@@ -1,0 +1,25 @@
+//car management system using classes
+#include<iostream>
+using namespace std;
+class cars {
+    public: string brand; string model; int year;
+};
+int main() {
+    cars c1, c2, c3;
+    c1.brand = "Volvo";
+    c1.model = "XC90";
+    c1.year = 2015;
+    c2.brand = "BMW";
+    c2.model = "X5";
+    c2.year = 2018;
+    c3.brand = "Toyota";
+    c3.model = "Camry";
+    c3.year = 2020;
+    cout<<"Details of the Cars"<<endl;
+    cout<<"Car 1:- "<<endl;
+    cout<<"Brand: "<<c1.brand<<endl<<"Model :"<<c1.model<<endl<<"Year: "<<c1.year<<endl;
+    cout<<"Car 2:- "<<endl;
+    cout<<"Brand: "<<c2.brand<<endl<<"Model :"<<c2.model<<endl<<"Year: "<<c2.year<<endl;
+    cout<<"Car 3:- "<<endl;
+    cout<<"Brand: "<<c3.brand<<endl<<"Model :"<<c3.model<<endl<<"Year: "<<c3.year<<endl;
+}
