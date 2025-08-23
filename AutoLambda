@@ -1,0 +1,21 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    char x='E';
+    char y='v';
+    char z='s';
+    auto a= [ x,&y,&z]()-> string{
+        string s;
+        s+=x;
+        s+=y;
+        s+=z;
+        return s;
+    };
+    x= 'E';
+    y= 'v'; 
+    z= 'a';
+    
+    string s= a();
+    cout<<s;
+}
