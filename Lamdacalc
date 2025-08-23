@@ -1,0 +1,35 @@
+//make a calculator using lambda expression 
+
+#include <iostream>
+using namespace std;
+int main() {
+    double a, b;
+    char op;
+    cout << "Enter a, operator, b: ";
+    cin >> a >> op >> b;
+    auto add = [](double x, double y) { 
+        return x + y; };
+    auto sub = [](double x, double y) { 
+        return x - y; };
+    auto mul = [](double x, double y) { 
+        return x * y; };
+    auto div = [](double x, double y) { 
+        return y != 0 ? x / y : 0; };
+    switch(op) {
+        case '+':
+         cout << add(a, b);
+         break;
+        case '-':
+         cout << sub(a, b); 
+        break;
+        case '*':
+         cout << mul(a, b); 
+        break;
+        case '/':
+         cout << div(a, b); 
+        break;
+        default:
+          cout << "Invalid operator";
+    }
+    return 0;
+}
