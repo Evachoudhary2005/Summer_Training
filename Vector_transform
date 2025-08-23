@@ -1,0 +1,28 @@
+ #include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+int main(){
+    vector<int> v1={1,2,3};
+    vector<int> v2={4,5,6};
+    vector<int> v3(6);
+    cout<<"Before: "<<endl;
+    for(int n:v1){
+        cout<<n<<" ";
+    }
+    cout<<endl;
+    for(int n:v2){
+        cout<<n<<" ";
+    }
+    cout<<endl;
+    replace(v1.begin(),v1.end(),2,5);
+    replace(v2.begin(),v2.end(),5,7);
+    cout<<"After: "<<endl;
+    for(int n:v1){
+        cout<<n<<" ";
+    }
+    cout<<endl;
+    for(int n:v2){
+        cout<<n<<" ";
+}
+}
