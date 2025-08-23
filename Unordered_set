@@ -1,0 +1,49 @@
+#include <iostream>
+#include <unordered_set>
+#include <unordered_map>
+#include <string>
+using namespace std;
+
+int main() {
+    unordered_set<string> uSet = {"Amitoj", "Amar", "Eva", "Vansh", "Arpita"};
+    cout << "Unordered Set:\n";
+    for (const auto& name : uSet)
+        cout << name << " ";
+    cout << "\n\n";
+
+    unordered_map<int, string> uMap;
+    uMap[1] = "Amitoj";
+    uMap[2] = "Amar";
+    uMap[3] = "Eva";
+    uMap[4] = "Arpita";
+    uMap[5] = "Harshdeep";
+
+    cout << "Unordered Map:\n";
+    for (int i = 1; i <= uMap.size(); ++i)
+        cout << "Student name of Roll No. " << i << " is: " << uMap[i] << endl;
+    cout << "\n";
+
+    unordered_multiset<string> uMultiSet;
+    uMultiSet.insert("Eva");
+    uMultiSet.insert("Eva");
+    uMultiSet.insert("Amar");
+    uMultiSet.insert("Arpita");
+
+    cout << "Unordered Multiset:\n";
+    for (const auto& name : uMultiSet)
+        cout << name << " ";
+    cout << "\n\n";
+
+    unordered_multimap<int, string> uMultiMap;
+    uMultiMap.insert({1, "Amitoj"});
+    uMultiMap.insert({1, "Eva"});
+    uMultiMap.insert({2, "Amar"});
+    uMultiMap.insert({2, "Arpita"});
+    uMultiMap.insert({3, "Harshdeep"});
+
+    cout << "Unordered Multimap:\n";
+    for (const auto& entry : uMultiMap)
+        cout << "Roll No. " << entry.first << " --> " << entry.second << endl;
+
+    return 0;
+}
