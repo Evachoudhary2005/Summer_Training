@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+enum month{
+    Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+};
+int main() {
+    int x;
+    cin>>x;
+    month mn= static_cast<month>(x); //static variable k andr type casting
+    switch(mn) {
+        case Jan:
+        cout<< "Gourav ka bday";
+        break;
+        case Feb:
+        cout<< "Lily ka bday";
+        break;
+        case Mar:
+        cout<< "Hardik ka  bday";
+        break;
+        case Apr:
+        cout<< "Commando aur Jasleen ka bday";
+        break;
+        case May:
+        cout<< "Amar ka bday";
+        break;
+        case Jun:
+        cout<< "Mona ka bday";
+        break;
+        case Jul:
+        cout<< "Mumma ka bday";
+        break;
+        case Aug:
+        cout<< "Tanvi ka bdayy";
+        break;
+        case Sep:
+        cout<< "Mera bday";
+        break;
+        case Oct:
+        cout<< "Gandhi jii  ka bday";
+        break;
+        case Nov:
+        cout<< "Mehak ka bday";
+        break;
+        case Dec:
+        cout<< "Harshdeep aur Sneha bdayyyyyy ";
+        break;
+    }
+}
