@@ -1,0 +1,15 @@
+//making namespace of your own.
+#include<iostream>
+using namespace std;
+namespace Eva{
+    int Harshdeep =10;
+    void Evafunc() {
+        cout<<"This is my World!! Hello World."<<endl;
+    }
+}
+using namespace Eva;
+int main() {
+    cout<<"My namespace says:- "<<endl;
+    Evafunc();
+    cout<<"For = "<<Harshdeep<<" times"<<endl;
+}
