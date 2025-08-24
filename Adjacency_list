@@ -1,0 +1,30 @@
+#include<iostream>
+#include<list>
+#include<map>
+#include<vector>
+using namespace std;
+    void List(vector<vector<int>>& adjList, int u, int v){
+        adjList[u].push_back(v);
+
+
+    }
+void print(const vector<vector<int>>& adjList){
+    for(int i=0;i<adjList.size();++i){
+        cout<<"for : "<<i<<" Adjacency list will be :";
+        for(int l: adjList[i]){
+            cout<<l<<" ";
+        }
+        cout<<endl;
+        }
+    };
+int main(){
+    int x = 4;
+    vector<vector<int>>adjList(4);
+    List(adjList,0,1);
+    List(adjList,1,2);
+    List(adjList,2,3);
+    List(adjList,3,1);
+    print(adjList);
+    return 0;
+
+}
