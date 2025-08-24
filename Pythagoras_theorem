@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cout << "Enter three sides of the triangle: ";
+    cin >> a >> b >> c;
+
+    if (a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a) {
+        cout << "It is a right-angled triangle." << endl;
+    } else {
+        cout << "It is NOT a right-angled triangle." << endl;
+    }
+
+    return 0;
+}
