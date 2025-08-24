@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+struct Node{
+    int data;
+    Node* left;
+    Node* right;
+    Node* third;
+    Node(char y): data(y),left(nullptr),right(nullptr),third(nullptr){}};
+int main(){
+    Node* root = new Node('a');
+    root->left = new Node('b');
+    root->right = new Node('c');
+    root->left->left = new Node('d');
+    root->left->right =new Node('e');
+    root->right->left = new Node('f');
+    root->right->third =new Node('g');
+    root->left->left->left = new Node('i');
+    root->left->left->right = new Node('j');
+    root->left->right->left = new Node('k');
+    return 0;
+}
