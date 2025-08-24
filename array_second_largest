@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
+int secondLargest(vector<int>& arr){
+    int largest = INT_MIN;
+    int second = INT_MIN;
+    for (int num : arr){
+        if (num > largest){
+            second = largest;
+            largest = num;
+        } else if (num>second && num<largest){
+            second = num;
+        }
+    }
+    return (second == INT_MIN) ? -1 : second;
+};
+int main(){
+    vector<int> arr = {10, 20, 20, 4, 45, 99, 85, 98};
+    int result = secondLargest(arr);
+    cout << "Second largest distinct element: " << result << endl;
+    return 0;
+}
