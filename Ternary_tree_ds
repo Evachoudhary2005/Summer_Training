@@ -1,0 +1,67 @@
+#include<iostream>
+using namespace std;
+
+struct Node {
+    char data;
+    Node* left;
+    Node* third;
+    Node* right;
+
+    Node(char y) : data(y), left(nullptr), third(nullptr), right(nullptr) {}
+};
+
+// Preorder: root, left, third, right
+void preorder(Node* root) {
+    if (root == nullptr) return;
+    cout << root->data << " ";
+    preorder(root->left);
+    preorder(root->third);
+    preorder(root->right);
+}
+
+// Inorder: left, root, third, right
+void inorder(Node* root) {
+    if (root == nullptr) return;
+    inorder(root->left);
+    cout << root->data << " ";
+    inorder(root->third);
+    inorder(root->right);
+}
+
+// Postorder: left, third, right, root
+void postorder(Node* root) {
+    if (root == nullptr) return;
+    postorder(root->left);
+    postorder(root->third);
+    postorder(root->right);
+    cout << root->data << " ";
+}
+
+int main() {
+    // Constructing the ternary tree
+    Node* root = new Node('a');
+    root->left = new Node('b');
+    root->right = new Node('c');
+    root->left->left = new Node('d');
+    root->left->right = new Node('e');
+    root->right->left = new Node('f');
+    root->right->third = new Node('g');
+    root->left->left->left = new Node('i');
+    root->left->left->right = new Node('j');
+    root->left->right->left = new Node('k');
+
+    // Traversals
+    cout << "Preorder Traversal: ";
+    preorder(root);
+    cout << "\n";
+
+    cout << "Inorder Traversal: ";
+    inorder(root);
+    cout << "\n";
+
+    cout << "Postorder Traversal: ";
+    postorder(root);
+    cout << "\n";
+
+    return 0;
+}
